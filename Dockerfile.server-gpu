@@ -10,4 +10,4 @@ ENV TNPP_PIPELINE ${PIPELINE}
 ENV TNPP_PORT ${PORT}
 ENV TNPP_MAXCHAR ${MAXCHAR}
 RUN python3 fetch_models.py $MODEL
-CMD python full_pipeline_server.py --host 0.0.0.0 --max-char ${TNPP_MAXCHAR} --port ${TNPP_PORT} --conf "models_${TNPP_MODELNAME}/pipelines.yaml" "${TNPP_PIPELINE}"
+CMD python3 full_pipeline_server.py --host 0.0.0.0 --max-char ${TNPP_MAXCHAR} --port ${TNPP_PORT} --conf "models_${TNPP_MODELNAME}/pipelines.yaml" "${TNPP_PIPELINE}"
